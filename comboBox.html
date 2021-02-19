@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComboBox</title>
+    <style>
+        select{
+            width: 200px;
+            padding: 5px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+   <form>
+       <select name="Select1" id="Select1">
+           <option value="90.00">Domaca kafa</option>
+           <option value="120.00">Espresso</option>
+           <option value="140.00">Makijato</option>
+           <option value="150.00">Kapucino</option>
+       </select>
+       <br>
+       <input type="button" value="Prikazi" onclick="Prikazi()">
+   </form> 
+   <br>
+   <span id="Span1"></span>
+
+   <script>
+       function Prikazi() {
+         var Select1 = document.getElementById("Select1");
+         var Span1 = document.getElementById("Span1");
+
+         var index = Select1.selectedIndex;
+         var listaStavki = Select1.options;
+
+         var selOpcija = listaStavki[index];
+
+        //  Span1.innerHTML = "#" + selOpcija.text + "<br>" 
+        //  + "Cena: " + selOpcija.value;
+
+        Span1.innerHTML = Select1.value;
+       };
+   </script>
+</body>
+</html>
