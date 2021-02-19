@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <select name="Select1" id="Select1" onchange="Prikazi()">
+            <option>Premier League</option>
+            <option value="#1">Arsenal</option>
+            <option value="#2">Chelsea</option>
+            <option value="#3">Munchester United</option>
+            <option value="#4">Liverpool</option>
+        </select>
+    </form>
+    <br>
+    <span id="Span1"></span>
+
+    <script>
+        function Prikazi() {
+            var sel1 = document.getElementById("Select1");//objektni model
+            var span1 = document.getElementById("Span1");
+
+           if (Select1.selectedIndex > 0) {
+               span1.innerHTML = Select1.value;
+           } else {
+               span1.innerHTML = "";
+           }
+        }
+    </script>
+</body>
+</html>
